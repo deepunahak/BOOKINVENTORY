@@ -10,7 +10,6 @@ prerequisite
 
 4.	install all packages using (pip install -r requirements.txt)
 
-5.	Go to project directory and open setting.py file for MySQL 
-	->Specify your database name, user, password, port ,host
+5.	Provide credential for SMTP
 	
 6.      Use postman for api call
