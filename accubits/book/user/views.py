@@ -38,6 +38,7 @@ def login(request):
                 user = User.objects.get(email=data['email'])
                 if user is not None and user.password == data['password']:
                     token = generate_user_token(data)
+                    cache.set(token, user.id)
                     response = {"msg": "login successfully", "resp": {"email": user.email, "token": token}, "status": 200, "error": ""}
                     return JsonResponse(response)
             except Exception as err:
